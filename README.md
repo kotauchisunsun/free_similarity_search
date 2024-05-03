@@ -14,6 +14,7 @@ https://render.com
 - chromaDB
 - langchain
 - scapy
+- gradio
 
 ## 簡易CLIツール  
 
