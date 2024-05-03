@@ -2,7 +2,7 @@
 
 ## サービス  
 
-https://free-similarity-search.onrender.com/docs  
+https://free-similarity-search.onrender.com/  
 
 ## ホスティング  
 
