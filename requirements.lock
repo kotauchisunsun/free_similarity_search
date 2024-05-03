@@ -9,16 +9,22 @@
 
 -e file:.
 aiohttp==3.9.5
+    # via gradio
     # via langchain
     # via langchain-community
 aiosignal==1.3.1
     # via aiohttp
+altair==5.3.0
+    # via gradio
 anyio==4.3.0
+    # via httpx
     # via starlette
     # via watchfiles
 attrs==23.2.0
     # via aiohttp
-backoff==2.2.1
+    # via jsonschema
+    # via referencing
+backoff==1.10.0
     # via posthog
 blis==0.7.11
     # via thinc
@@ -27,6 +33,8 @@ catalogue==2.0.10
     # via srsly
     # via thinc
 certifi==2024.2.2
+    # via httpcore
+    # via httpx
     # via pulsar-client
     # via requests
 charset-normalizer==3.3.2
@@ -46,6 +54,10 @@ coloredlogs==15.0.1
 confection==0.1.4
     # via thinc
     # via weasel
+contourpy==1.2.1
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
 cymem==2.0.8
     # via preshed
     # via spacy
@@ -56,28 +68,42 @@ dataclasses-json==0.6.5
 fastapi==0.95.2
     # via chromadb
     # via free-similarity-search
+    # via gradio
     # via langchain-chroma
+ffmpy==0.3.2
+    # via gradio
 filelock==3.14.0
     # via huggingface-hub
 flatbuffers==24.3.25
     # via onnxruntime
+fonttools==4.51.0
+    # via matplotlib
 frozenlist==1.4.1
     # via aiohttp
     # via aiosignal
 fsspec==2024.3.1
+    # via gradio
     # via huggingface-hub
+gradio==3.14.0
+    # via free-similarity-search
 greenlet==3.0.3
     # via sqlalchemy
 h11==0.14.0
+    # via httpcore
     # via uvicorn
+httpcore==1.0.5
+    # via httpx
 httptools==0.6.1
     # via uvicorn
+httpx==0.27.0
+    # via gradio
 huggingface-hub==0.23.0
     # via tokenizers
 humanfriendly==10.0
     # via coloredlogs
 idna==3.7
     # via anyio
+    # via httpx
     # via requests
     # via yarl
 importlib-resources==6.4.0
@@ -85,12 +111,20 @@ importlib-resources==6.4.0
 ja-core-news-md @ https://github.com/explosion/spacy-models/releases/download/ja_core_news_md-3.7.0/ja_core_news_md-3.7.0-py3-none-any.whl
     # via free-similarity-search
 jinja2==3.1.3
+    # via altair
+    # via gradio
     # via spacy
 jsonpatch==1.33
     # via langchain
     # via langchain-core
 jsonpointer==2.4
     # via jsonpatch
+jsonschema==4.22.0
+    # via altair
+jsonschema-specifications==2023.12.1
+    # via jsonschema
+kiwisolver==1.4.5
+    # via matplotlib
 langchain==0.1.17
     # via free-similarity-search
 langchain-chroma==0.1.0
@@ -112,12 +146,24 @@ langsmith==0.1.53
     # via langchain-core
 language-data==1.2.0
     # via langcodes
+linkify-it-py==2.0.3
+    # via markdown-it-py
 marisa-trie==1.1.0
     # via language-data
+markdown-it-py==3.0.0
+    # via gradio
+    # via mdit-py-plugins
 markupsafe==2.1.5
+    # via gradio
     # via jinja2
 marshmallow==3.21.2
     # via dataclasses-json
+matplotlib==3.8.4
+    # via gradio
+mdit-py-plugins==0.4.0
+    # via markdown-it-py
+mdurl==0.1.2
+    # via markdown-it-py
 monotonic==1.6
     # via posthog
 mpmath==1.3.0
@@ -132,68 +178,95 @@ murmurhash==1.0.10
 mypy-extensions==1.0.0
     # via typing-inspect
 numpy==1.26.4
+    # via altair
     # via blis
     # via chroma-hnswlib
     # via chromadb
+    # via contourpy
+    # via gradio
     # via langchain
     # via langchain-chroma
     # via langchain-community
+    # via matplotlib
     # via onnxruntime
     # via pandas
     # via spacy
     # via thinc
 onnxruntime==1.17.3
     # via chromadb
-orjson==3.10.2
+orjson==3.10.3
+    # via gradio
     # via langsmith
 overrides==7.7.0
     # via chromadb
 packaging==23.2
+    # via altair
     # via huggingface-hub
     # via langchain-core
     # via marshmallow
+    # via matplotlib
     # via onnxruntime
     # via spacy
     # via thinc
     # via weasel
 pandas==2.2.2
+    # via altair
     # via chromadb
+    # via gradio
+pillow==10.3.0
+    # via gradio
+    # via matplotlib
 posthog==3.5.0
     # via chromadb
 preshed==3.0.9
     # via spacy
     # via thinc
-protobuf==4.25.3
+protobuf==5.26.1
     # via onnxruntime
 pulsar-client==3.5.0
     # via chromadb
+pycryptodome==3.20.0
+    # via gradio
 pydantic==1.10.15
     # via chromadb
     # via confection
     # via fastapi
+    # via gradio
     # via langchain
     # via langchain-core
     # via langsmith
     # via spacy
     # via thinc
     # via weasel
+pydub==0.25.1
+    # via gradio
+pyparsing==3.1.2
+    # via matplotlib
 pypika==0.48.9
     # via chromadb
 python-dateutil==2.9.0.post0
+    # via matplotlib
     # via pandas
     # via posthog
 python-dotenv==1.0.1
     # via uvicorn
+python-multipart==0.0.9
+    # via gradio
 pytz==2024.1
     # via pandas
 pyyaml==6.0.1
+    # via gradio
     # via huggingface-hub
     # via langchain
     # via langchain-community
     # via langchain-core
     # via uvicorn
+referencing==0.35.1
+    # via jsonschema
+    # via jsonschema-specifications
 requests==2.31.0
     # via chromadb
+    # via gradio
     # via huggingface-hub
     # via langchain
     # via langchain-community
@@ -201,6 +274,9 @@ requests==2.31.0
     # via posthog
     # via spacy
     # via weasel
+rpds-py==0.18.0
+    # via jsonschema
+    # via referencing
 scapy==2.5.0
     # via free-similarity-search
 setuptools==69.5.1
@@ -215,6 +291,7 @@ smart-open==6.4.0
     # via weasel
 sniffio==1.3.1
     # via anyio
+    # via httpx
 spacy==3.7.4
     # via free-similarity-search
     # via ja-core-news-md
@@ -247,6 +324,8 @@ thinc==8.2.3
     # via spacy
 tokenizers==0.19.1
     # via chromadb
+toolz==0.12.1
+    # via altair
 tqdm==4.66.4
     # via chromadb
     # via free-similarity-search
@@ -266,10 +345,13 @@ typing-inspect==0.9.0
     # via dataclasses-json
 tzdata==2024.1
     # via pandas
+uc-micro-py==1.0.3
+    # via linkify-it-py
 urllib3==2.2.1
     # via requests
 uvicorn==0.29.0
     # via chromadb
+    # via gradio
 uvloop==0.19.0
     # via uvicorn
 wasabi==1.1.2
@@ -281,6 +363,7 @@ watchfiles==0.21.0
 weasel==0.3.4
     # via spacy
 websockets==12.0
+    # via gradio
     # via uvicorn
 yarl==1.9.4
     # via aiohttp

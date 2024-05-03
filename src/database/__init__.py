@@ -34,8 +34,8 @@ class Database:
     def add(self, question: str, metadata):
         self.db.add_texts(texts=[question],metadatas=[metadata])
 
-    def query(self, question:str):
-        return self.db.similarity_search(question)        
+    def query(self, question:str, n=10):
+        return self.db.similarity_search_with_score(question,k=n)        
 
     @classmethod
     def get_config_path(cls,model_path: str):

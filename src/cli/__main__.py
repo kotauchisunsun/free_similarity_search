@@ -45,9 +45,9 @@ class Command:
                     }                
                 )
 
-    def query(self, model_path:str, question:str):
+    def query(self, model_path:str, question:str, n:int=10):
         db = Database(model_path)
-        return db.query(question)
+        return db.query(question,n)
     
 if __name__=="__main__":
     fire.Fire(Command)
