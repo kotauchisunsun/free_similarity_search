@@ -5,7 +5,7 @@ from tqdm import tqdm
 import json
 
 class Command:
-    def create(self, model_path:str, model_name = "ja_core_news_lg", collection_name = "default"):
+    def create(self, model_path:str, model_name = "ja_core_news_md", collection_name = "default"):
         Database.create(model_path=model_path, model_name=model_name, collection_name=collection_name)
         
     def dump_csv(self, json_path:str, csv_path:str):

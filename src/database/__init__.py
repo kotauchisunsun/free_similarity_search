@@ -18,7 +18,7 @@ class Database:
         self.db = Chroma(client=persistent_client,collection_name=collection_name,embedding_function=embedding_function)
 
     @staticmethod
-    def create(model_path:str, model_name = "ja_core_news_lg", collection_name = "default"):
+    def create(model_path:str, model_name = "ja_core_news_md", collection_name = "default"):
         persistent_client = chromadb.PersistentClient(path=model_path)
         embedding_function = SpacyEmbeddings(model_name=model_name)
         persistent_client.create_collection(name=collection_name,embedding_function=embedding_function)
